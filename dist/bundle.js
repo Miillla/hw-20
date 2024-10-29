@@ -1,0 +1,1 @@
+$(document).ready((function(){const t=$("#todoList"),o=JSON.parse(localStorage.getItem("todo-items"))||[];o.forEach((o=>{t.append(`<p>${o.text}</p>`)})),$("#add-todo").on("click",(function(){const e=$("#todo-input").val();o.push({text:e,completed:!1}),localStorage.setItem("todo-items",JSON.stringify(o)),t.append(`<p>${e}</p>`),$("#todo-input").val("")})),console.log("ready!")}));
